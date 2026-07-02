@@ -5,40 +5,34 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 
+df = pd.read_csv("Multiple_Linear_Regression/data/placement_package_regression.csv")
 
-class IshiLR:
+
+class IshiMLR:
     def __init__(self):
-        self.m = None
-        self.b = None
+        self.coef = None
+        self.intercept = None
 
     def fit(self, X_train, Y_train):
-        num = 0
-        den = 0
+        X_train = np.insert(X_train, 0, 1, axis=1)
 
-        x_mean = X_train.mean()
-        y_mean = Y_train.mean()
+        betas = np.linalg.inv(np.dot(X_train.T, X_train)).dot(X_train.T).dot(Y_train)
 
-        for i in range(X_train.shape[0]):
-            num += (Y_train.iloc[i] - y_mean) * (X_train.iloc[i] - x_mean)
-            den += (X_train.iloc[i] - x_mean) ** 2
+        self.coef = betas[1:]
+        self.intercept = betas[0]
 
-        self.m = num / den
-        self.b = y_mean - (self.m * x_mean)
-
-    def predict(self, X):
-        return self.m * X + self.b
+    def predict(self, X_test):
+        y_pred = np.dot(X_test, self.coef) + self.intercept
+        return y_pred
 
 
-df = pd.read_csv("Simple_Linear_Regression/data/student_marks_regression.csv")
-
-X = df["StudyHours"]
-Y = df["Marks"]
+X = df[["CGPA", "Projects", "DSA_Score", "Internships", "Communication_Score"]]
+Y = df["Package_LPA"]
 
 X_train, X_test, Y_train, Y_test = train_test_split(
     X, Y, test_size=0.2, random_state=56
 )
-
-scratch_model = IshiLR()
+scratch_model = IshiMLR()
 scratch_model.fit(X_train, Y_train)
 scratch_pred = scratch_model.predict(X_test)
 
@@ -47,7 +41,7 @@ sklearn_model.fit(X_train, Y_train)
 sklearn_pred = sklearn_model.predict(X_test)
 
 print("=" * 60)
-print("SIMPLE LINEAR REGRESSION MODEL COMPARISON")
+print("MULTIPLE LINEAR REGRESSION MODEL COMPARISON")
 print("=" * 60)
 
 print("\nScratch Model Results")
@@ -55,8 +49,8 @@ print("-" * 60)
 print("R² Score :", r2_score(Y_test, scratch_pred))
 print("MAE      :", mean_absolute_error(Y_test, scratch_pred))
 print("RMSE     :", np.sqrt(mean_squared_error(Y_test, scratch_pred)))
-print("Slope    :", scratch_model.m)
-print("Intercept:", scratch_model.b)
+print("Slope    :", scratch_model.coef)
+print("Intercept:", scratch_model.intercept)
 
 print("\nScikit-learn Model Results")
 print("-" * 60)
@@ -69,7 +63,7 @@ print("Intercept:", sklearn_model.intercept_)
 comparison = pd.DataFrame(
     {
         "Actual": Y_test.values,
-        "Scratch_Predicted": scratch_pred.values,
+        "Scratch_Predicted": scratch_pred,
         "Sklearn_Predicted": sklearn_pred,
     }
 )
