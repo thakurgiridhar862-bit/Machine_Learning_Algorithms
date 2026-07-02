@@ -12,17 +12,17 @@ class IshiLR:
         self.b = None
 
     def fit(self, X_train, Y_train):
-        numerator = 0
-        denominator = 0
+        num = 0
+        den = 0
 
         x_mean = X_train.mean()
         y_mean = Y_train.mean()
 
         for i in range(X_train.shape[0]):
-            numerator += (Y_train.iloc[i] - y_mean) * (X_train.iloc[i] - x_mean)
-            denominator += (X_train.iloc[i] - x_mean) ** 2
+            num += (Y_train.iloc[i] - y_mean) * (X_train.iloc[i] - x_mean)
+            den += (X_train.iloc[i] - x_mean) ** 2
 
-        self.m = numerator / denominator
+        self.m = num / den
         self.b = y_mean - (self.m * x_mean)
 
     def predict(self, X):
