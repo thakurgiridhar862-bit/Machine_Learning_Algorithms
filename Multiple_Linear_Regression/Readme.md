@@ -75,6 +75,9 @@ The project also includes a simple Streamlit interface where you can:
 - Streamlit
 
 ---
+## Dataset
+
+This project uses a synthetic dataset created for learning and implementation purposes. The data simulates a placement prediction scenario and is not collected from any real institution.
 
 ## ▶️ How to Run
 
