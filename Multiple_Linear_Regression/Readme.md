@@ -115,6 +115,19 @@ python -m streamlit run app.py
 
 ---
 
+## 🖥️ Dashboard Preview
+
+### Before Prediction
+
+<p align="center">
+<img src="images/Dashboard.png" width="900">
+</p>
+
+### After Prediction
+
+<p align="center">
+<img src="images/Final_Dashboard.png" width="900">
+</p>
 ## 👨‍💻 Author
 
 **Giridhar Jadon**
