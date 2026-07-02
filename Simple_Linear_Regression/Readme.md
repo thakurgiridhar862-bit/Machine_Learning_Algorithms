@@ -1,124 +1,41 @@
-# 🚀 Simple Linear Regression From Scratch
+# Simple Linear Regression From Scratch
 
-> A complete implementation of **Simple Linear Regression from scratch using Python**, followed by a comparison with Scikit-learn's implementation to validate the mathematical correctness of the algorithm.
+This project is my implementation of Simple Linear Regression using Python. Instead of directly using Scikit-learn for training, I first built the algorithm from scratch to understand how linear regression actually works behind the scenes. After completing the custom implementation, I compared it with Scikit-learn's implementation to verify that both models produce nearly identical results.
 
----
+The project uses a simple dataset where the goal is to predict a student's marks based on the number of study hours.
 
-## 📌 Project Overview
+## Project Structure
 
-Machine Learning libraries make training models extremely easy, but understanding **what happens behind the scenes** is equally important.
-
-This project focuses on implementing **Simple Linear Regression** from scratch using mathematical formulas without relying on Scikit-learn's regression algorithm.
-
-After implementing the algorithm manually, the results are compared against **Scikit-learn's LinearRegression** model to verify the correctness of the implementation.
-
----
-
-## 🎯 Objective
-
-- Understand the mathematics behind Linear Regression.
-- Implement the algorithm completely from scratch.
-- Predict student marks based on study hours.
-- Compare the custom implementation with Scikit-learn.
-- Validate the implementation using standard evaluation metrics.
-
----
-
-## 📂 Dataset
-
-The dataset contains two features:
-
-| Feature | Description |
-|----------|-------------|
-| StudyHours | Number of hours studied |
-| Marks | Student's obtained marks |
-
----
-
-## 📁 Project Structure
-
-```
-Simple_Linear_Regression
+```text
+Simple_Linear_Regression/
 │
 ├── dataset/
 │   └── student_marks_regression.csv
 │
-├── sklearn_slr.py
 ├── scratch_slr.py
+├── sklearn_slr.py
 ├── comparison.py
 ├── README.md
 └── requirements.txt
 ```
 
----
+## What's Included
 
-## ⚙️ Implementations Included
+- A complete implementation of Simple Linear Regression from scratch
+- Scikit-learn implementation for comparison
+- Performance evaluation using standard regression metrics
+- Visualization of the regression line
+- Comparison between both models
 
-### ✅ Scratch Implementation
+## Evaluation Metrics
 
-Implemented manually using:
-
-- Mean
-- Covariance
-- Variance
-- Slope Calculation
-- Intercept Calculation
-- Prediction Formula
-
-No Machine Learning regression library is used for training.
-
----
-
-### ✅ Scikit-learn Implementation
-
-Implemented using
-
-- LinearRegression
-- Train-Test Split
-- Model Evaluation
-
-to compare the custom model against an industry-standard implementation.
-
----
-
-## 📈 Model Evaluation
-
-Both implementations are evaluated using:
+The models are evaluated using:
 
 - R² Score
 - Mean Absolute Error (MAE)
 - Root Mean Squared Error (RMSE)
 
-The comparison demonstrates that the scratch implementation produces results very close to Scikit-learn's model.
-
----
-
-## 📊 Workflow
-
-```
-Dataset
-    │
-    ▼
-Train-Test Split
-    │
-    ▼
-Scratch Model
-    │
-    ├── Calculate Mean
-    ├── Calculate Slope
-    ├── Calculate Intercept
-    └── Predict
-    │
-    ▼
-Evaluation
-    │
-    ▼
-Comparison with Scikit-learn
-```
-
----
-
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Python
 - NumPy
@@ -127,88 +44,40 @@ Comparison with Scikit-learn
 - Matplotlib
 - Seaborn
 
----
+## What I Learned
 
-## 💻 How to Run
+Working on this project helped me understand the mathematics behind Simple Linear Regression instead of treating it as a black-box algorithm. I learned how the slope and intercept are calculated, how predictions are generated, and how a custom implementation can be validated by comparing it with Scikit-learn. This project also strengthened my understanding of regression evaluation metrics and the complete workflow of building a basic machine learning model.
 
-Clone the repository
+## How to Run
 
-```bash
-git clone <repository-url>
-```
-
-Install dependencies
+Install the required libraries:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run Scratch Model
+Run the scratch implementation:
 
 ```bash
 python scratch_slr.py
 ```
 
-Run Scikit-learn Model
+Run the Scikit-learn implementation:
 
 ```bash
 python sklearn_slr.py
 ```
 
-Compare Both Models
+Compare both models:
 
 ```bash
 python comparison.py
 ```
 
----
-
-## 🎓 Learning Outcomes
-
-This project helped strengthen my understanding of:
-
-- Machine Learning Fundamentals
-- Linear Regression Mathematics
-- Regression Intuition
-- Model Evaluation
-- Python Object-Oriented Programming
-- Algorithm Implementation from Scratch
-
----
-
-## 🚀 Future Improvements
-
-- Gradient Descent Implementation
-- Stochastic Gradient Descent
-- Mini Batch Gradient Descent
-- Polynomial Regression
-- Ridge Regression
-- Lasso Regression
-
----
-
-## 👨‍💻 Author
+## Author
 
 **Giridhar Jadon**
 
-B.Tech (Artificial Intelligence & Machine Learning)
+B.Tech – Artificial Intelligence & Machine Learning
 
 Aspiring AI/ML Engineer
-
----
-
-## ⭐ Repository Goal
-
-This repository is a part of my **Machine Learning From Scratch** series, where every Machine Learning algorithm will first be implemented mathematically from scratch and then validated using Scikit-learn.
-
-Upcoming Implementations:
-
-- ✅ Simple Linear Regression
-- ⏳ Multiple Linear Regression
-- ⏳ Gradient Descent
-- ⏳ Logistic Regression
-- ⏳ Naive Bayes
-- ⏳ K-Nearest Neighbors
-- ⏳ Decision Trees
-- ⏳ Random Forest
-- ⏳ Support Vector Machine
