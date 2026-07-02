@@ -15,19 +15,19 @@ X_train, X_test, Y_train, Y_test = train_test_split(
 lr = LinearRegression()
 lr.fit(X_train, Y_train)
 
-# Cgpa = float(input("Enter Your Cgpa : "))
-# Pro = int(input("Enter the number of projects You have done : "))
-# DSA = int(input("Enter your DSA test score : "))
-# Intern = int(input("Enter the number of internships you have done : "))
-# Communication = int(input("Enter your comunication test score : "))
+Cgpa = float(input("Enter Your Cgpa : "))
+Pro = int(input("Enter the number of projects You have done : "))
+DSA = int(input("Enter your DSA test score : "))
+Intern = int(input("Enter the number of internships you have done : "))
+Communication = int(input("Enter your comunication test score : "))
 
-# input_data = pd.DataFrame(
-#     [[Cgpa, Pro, DSA, Intern, Communication]],
-#     columns=["CGPA", "Projects", "DSA_Score", "Internships", "Communication_Score"],
-# )
+input_data = pd.DataFrame(
+    [[Cgpa, Pro, DSA, Intern, Communication]],
+    columns=["CGPA", "Projects", "DSA_Score", "Internships", "Communication_Score"],
+)
 
-# y_pred = lr.predict(input_data)
-# print("Acc to my Prediction Your package will be : ", y_pred)
+y_pred = lr.predict(input_data)
+print("Acc to my Prediction Your package will be : ", y_pred)
 
 y_pred = lr.predict(X_test)
 
