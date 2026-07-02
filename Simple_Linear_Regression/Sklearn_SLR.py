@@ -11,7 +11,6 @@ from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 # Load dataset
 df = pd.read_csv("Simple_Linear_Regression/data/student_marks_regression.csv")
 
-# Features and target
 X = df[["StudyHours"]]
 Y = df["Marks"]
 
@@ -27,11 +26,6 @@ model.fit(X_train, Y_train)
 # Prediction
 Y_pred = model.predict(X_test)
 
-# Actual vs Predicted
-result = pd.DataFrame({"Actual": Y_test.values, "Predicted": Y_pred})
-
-print("\nActual vs Predicted")
-print(result.head(10))
 
 # Evaluation
 print("\nModel Evaluation")

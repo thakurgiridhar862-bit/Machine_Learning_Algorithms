@@ -30,7 +30,6 @@ class IshiLR:
         return self.m * X + self.b
 
 
-# Features and Target
 X = df["StudyHours"]
 Y = df["Marks"]
 
