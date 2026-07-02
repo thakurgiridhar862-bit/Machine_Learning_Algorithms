@@ -22,7 +22,7 @@ The model predicts the expected placement package of a student based on differen
 ## 📂 Project Structure
 
 ```text
-Multiple_Linear_Regression/
+Placement_Package_Predictor/
 
 │
 ├── data/

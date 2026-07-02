@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 
-df = pd.read_csv("Multiple_Linear_Regression/data/placement_package_regression.csv")
+df = pd.read_csv("Placement_Package_Predictor/data/placement_package_regression.csv")
 
 
 class IshiMLR:
