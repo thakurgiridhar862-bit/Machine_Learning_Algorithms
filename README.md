@@ -24,55 +24,6 @@ Each implementation is later validated by comparing it with the corresponding Sc
 
 ---
 
-# 📚 Algorithms
-
-| Algorithm | Scratch | Scikit-learn | Status |
-|------------|:-------:|:------------:|:------:|
-| Simple Linear Regression | ✅ | ✅ | Completed |
-| Multiple Linear Regression | ⏳ | ⏳ | In Progress |
-| Gradient Descent | ⏳ | — | Upcoming |
-| Stochastic Gradient Descent | ⏳ | — | Upcoming |
-| Mini Batch Gradient Descent | ⏳ | — | Upcoming |
-| Polynomial Regression | ⏳ | ✅ | Upcoming |
-| Ridge Regression | ⏳ | ✅ | Upcoming |
-| Lasso Regression | ⏳ | ✅ | Upcoming |
-| Elastic Net Regression | ⏳ | ✅ | Upcoming |
-| Logistic Regression | ⏳ | ✅ | Upcoming |
-| Naive Bayes | ⏳ | ✅ | Upcoming |
-| K-Nearest Neighbors | ⏳ | ✅ | Upcoming |
-| Support Vector Machine | ⏳ | ✅ | Upcoming |
-| Decision Tree | ⏳ | ✅ | Upcoming |
-| Random Forest | ⏳ | ✅ | Upcoming |
-| K-Means Clustering | ⏳ | ✅ | Upcoming |
-| Principal Component Analysis | ⏳ | ✅ | Upcoming |
-
----
-
-# 🗂 Repository Structure
-
-```text
-Machine_Learning_From_Scratch
-│
-├── 01_Simple_Linear_Regression
-├── 02_Multiple_Linear_Regression
-├── 03_Gradient_Descent
-├── 04_Stochastic_Gradient_Descent
-├── 05_Mini_Batch_Gradient_Descent
-├── 06_Polynomial_Regression
-├── 07_Ridge_Regression
-├── 08_Lasso_Regression
-├── 09_Elastic_Net
-├── 10_Logistic_Regression
-├── 11_Naive_Bayes
-├── 12_KNN
-├── 13_SVM
-├── 14_Decision_Tree
-├── 15_Random_Forest
-├── README.md
-└── requirements.txt
-```
-
----
 
 # 🛠 Technologies Used
 
