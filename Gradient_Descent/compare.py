@@ -28,7 +28,7 @@ def main():
     Y_pred_lr = lr.predict(X_test_2d)
 
     print("=" * 70)
-    print("SIMPLE LINEAR REGRESSION Vs GRADIENT DESCENT MODEL COMPARISON")
+    print("GRADIENT DESCENT Vs SCIKIT-LEARN LINEAR REGRESSION")
     print("=" * 70)
 
     print("\nGradient Descent Model Results")
@@ -46,6 +46,18 @@ def main():
     print("RMSE     :", np.sqrt(mean_squared_error(Y_test, Y_pred_lr)))
     print("Slope    :", lr.coef_[0])
     print("Intercept:", lr.intercept_)
+
+    comparison = pd.DataFrame(
+        {
+            "Actual": Y_test.values,
+            "Gradient_Descent_Predicted": Y_pred_GS.values,
+            "Sklearn_Predicted": Y_pred_lr,
+        }
+    )
+
+    print("\nActual vs Predicted")
+    print("-" * 60)
+    print(comparison.head(10))
 
 
 if __name__ == "__main__":
