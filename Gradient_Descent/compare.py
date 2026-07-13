@@ -1,6 +1,9 @@
 from data_preprocessing import load_data, clean_data, train_test
 from GD import GS_reg
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
+import pandas as pd
+import numpy as np
 
 
 def main():
@@ -27,6 +30,22 @@ def main():
     print("=" * 70)
     print("SIMPLE LINEAR REGRESSION Vs GRADIENT DESCENT MODEL COMPARISON")
     print("=" * 70)
+
+    print("\nGradient Descent Model Results")
+    print("-" * 60)
+    print("R² Score :", r2_score(Y_test, Y_pred_GS))
+    print("MAE      :", mean_absolute_error(Y_test, Y_pred_GS))
+    print("RMSE     :", np.sqrt(mean_squared_error(Y_test, Y_pred_GS)))
+    print("Slope    :", gs.m)
+    print("Intercept:", gs.b)
+
+    print("\nScikit-learn Model Results")
+    print("-" * 60)
+    print("R² Score :", r2_score(Y_test, Y_pred_lr))
+    print("MAE      :", mean_absolute_error(Y_test, Y_pred_lr))
+    print("RMSE     :", np.sqrt(mean_squared_error(Y_test, Y_pred_lr)))
+    print("Slope    :", lr.coef_[0])
+    print("Intercept:", lr.intercept_)
 
 
 if __name__ == "__main__":
