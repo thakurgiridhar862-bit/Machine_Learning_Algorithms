@@ -10,26 +10,26 @@ def data_overview(df):
 
     print("=" * 60)
     print("DATASET OVERVIEW")
-    print("=" * 50)
+    print("=" * 60)
 
     print("\nFirst Five Rows")
     print("-" * 50)
     print(df.head(5))
 
-    print("Dataset Size")
+    print("\nDataset Size")
     print("-" * 50)
     print(f"Total Rows    : {df.shape[0]}")
     print(f"Total Columns : {df.shape[1]}")
 
-    print("Columns Name")
+    print("\nColumns Name")
     print("-" * 50)
     print(df.columns.tolist())
 
-    print("Data Types")
+    print("\nData Types")
     print("-" * 60)
     print(df.dtypes)
 
-    print("Missing Values")
+    print("\nMissing Values")
     print("-" * 50)
     print(df.isnull().sum())
     print(f"Total Missing Values : {df.isnull().sum().sum()}")
