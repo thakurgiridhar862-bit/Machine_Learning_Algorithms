@@ -41,3 +41,14 @@ def main():
     print("\nACTUAL VS PREDICTED")
     print("-" * 50)
     print(comparison.head(10))
+
+    print("\nMODEL EVALUATION")
+    print("-" * 50)
+    print(f"MAE  : {mae:.4f}")
+    print(f"MSE  : {mse:.4f}")
+    print(f"RMSE : {rmse:.4f}")
+    print(f"R2   : {r2:.4f}")
+
+
+if __name__ == "__main__":
+    main()
