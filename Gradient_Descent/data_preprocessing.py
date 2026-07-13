@@ -34,12 +34,13 @@ def train_test(df):
     print(f"X_Test Size = {X_test.shape}")
     print(f"Y_Train Size = {Y_train.shape}")
     print(f"Y_Test Size = {Y_test.shape}")
+    return X_train, X_test, Y_train, Y_test
 
 
 def main():
     df = load_data()
     df = clean_data(df)
-    train_test(df)
+    X_train, X_test, Y_train, Y_test = train_test(df)
 
 
 if __name__ == "__main__":
