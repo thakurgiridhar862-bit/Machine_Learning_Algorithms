@@ -15,8 +15,6 @@ class GS_reg:
             ls_m = -2 * np.sum((Y - self.m * X - self.b) * X)
             self.b -= self.lr * ls_b
             self.m -= self.lr * ls_m
-        print(self.m)
-        print(self.b)
 
     def predict(self, X):
         return self.m * X + self.b
